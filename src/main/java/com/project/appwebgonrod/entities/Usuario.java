@@ -1,5 +1,6 @@
 package com.project.appwebgonrod.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -17,10 +18,12 @@ import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = "usuarioRoles")
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
@@ -61,5 +64,5 @@ public class Usuario {
     private String contrasena;
 
     @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
-    private List<UsuarioRol> usuariosRoles;
+    private List<UsuarioRol> usuarioRoles = new ArrayList<>();
 }
