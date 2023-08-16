@@ -2,7 +2,7 @@ package com.project.appwebgonrod.controllers.rest;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+// import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,10 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.appwebgonrod.entities.Rol;
 import com.project.appwebgonrod.entities.Usuario;
 import com.project.appwebgonrod.entities.UsuarioRol;
-import com.project.appwebgonrod.services.RolService;
+// import com.project.appwebgonrod.services.RolService;
 import com.project.appwebgonrod.services.UsuarioService;
 
 @RestController
@@ -25,8 +24,8 @@ public class UsuarioControllerRest {
     @Autowired
     private UsuarioService usuarioService;
 
-    @Autowired
-    private RolService rolService;
+    // @Autowired
+    // private RolService rolService;
 
     @PostMapping("/crear-usuario")
     public  Usuario saveUsuario(@RequestBody Usuario usuario) throws Exception {
