@@ -7,4 +7,8 @@ import com.project.appwebgonrod.entities.UsuarioRol;
 
 public interface UsuarioService {
     public Usuario saveNewUsuario(Usuario usuario, List<UsuarioRol> usuarioRoles) throws Exception;    
+    
+    public Usuario findUsuarioByCorreo(String correo);
+
+    public void deleteUsuarioById(Long id_usuario);
 }

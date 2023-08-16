@@ -1,16 +1,10 @@
 package com.project.appwebgonrod;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.project.appwebgonrod.entities.Rol;
-import com.project.appwebgonrod.entities.Usuario;
-import com.project.appwebgonrod.entities.UsuarioRol;
 import com.project.appwebgonrod.services.UsuarioService;
 
 @SpringBootApplication

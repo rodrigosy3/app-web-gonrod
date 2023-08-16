@@ -15,6 +15,8 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -42,5 +44,6 @@ public class Rol {
     private int rango;
 
     @OneToMany(mappedBy = "rol", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<UsuarioRol> usuariosRoles = new ArrayList<>();
 }

@@ -39,10 +39,19 @@ public class UsuarioServiceImpl implements UsuarioService {
                 usuarioRolRepository.save(usuarioRol);
             }
 
-            usuario.getUsuarioRoles().addAll(usuarioRoles);
-            
+            usuario.getUsuarioRoles().addAll(usuarioRoles);            
         }
 
         return usuario;
+    }
+
+    @Override
+    public Usuario findUsuarioByCorreo(String correo) {
+        return usuarioRepository.findByCorreo(correo);
+    }
+
+    @Override
+    public void deleteUsuarioById(Long id_usuario) {
+        usuarioRepository.deleteById(id_usuario);
     }
 }
